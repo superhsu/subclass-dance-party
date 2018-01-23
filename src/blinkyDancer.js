@@ -1,14 +1,18 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  console.log(this);
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="blinkyDancer"></span>');
-  this.setPosition(this.top, this.left);
-  this.step(); 
+  this.oldStep = makeBlinkyDancer.prototype.step;
+  this.$node.attr('src', 'src/images/morty.gif');
+  this.$node.addClass('dancer');
+  this.setPosition(top, left);
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer; 
+makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+
 makeBlinkyDancer.prototype.step = function() {
-    $node.toggle();
-    makeDancer.prototype.step.call(this);
-  };
+
+makeDancer.prototype.step.call(this, this.timeBetweenSteps);
+
+// this.$node.toggle();
+
+};

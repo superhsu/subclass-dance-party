@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url("http://i.imgur.com/V998iE4.png") no-repeat fixed 100% 100%;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,7 +21,23 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  /*border:10px solid red;
+  border-radius:10px;*/
+  position:absolute;
+}
+
+.blinkyDancer{
+  max-width: 10%;
+  max-height: 10%;
+  position:absolute;
+}
+
+.popDancer{
+  border:50px solid red;
+  position:absolute;
+}
+
+.hopDancer{
+  border:80px solid purple;
   position:absolute;
 }

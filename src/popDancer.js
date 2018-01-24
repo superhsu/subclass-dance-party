@@ -2,7 +2,7 @@ var makePopDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.oldStep = makePopDancer.prototype.step;
   this.$node.attr('src', 'src/images/pickles.gif');
-  this.$node.addClass('dancer');
+  this.$node.addClass('dancer animate');
   this.setPosition(top, left);
 };
 

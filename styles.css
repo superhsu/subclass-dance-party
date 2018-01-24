@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background: url("http://i.imgur.com/V998iE4.png") no-repeat fixed 100% 100%;
+  background: url("http://i.imgur.com/V998iE4.png") repeat;
+  background-size:auto;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -20,24 +21,120 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
+.lineUp .makeBig {
+  padding:5px 12px;
+  float: right;
+  position: absolute;
+}
+
+
 .dancer{
   /*border:10px solid red;
   border-radius:10px;*/
-  position:absolute;
+  position:fixed;
 }
 
-.blinkyDancer{
+blinkyDancer{
   max-width: 10%;
   max-height: 10%;
-  position:absolute;
+  /* position:absolute; */
 }
 
-.popDancer{
+blinkyDancer:hover{
+  -webkit-animation: alternate-reverse
+}
+
+.dancer.popDancer{
   border:50px solid red;
   position:absolute;
 }
 
 .hopDancer{
-  border:80px solid purple;
+  border:80px solid;
+  border-radius: 102px;
   position:absolute;
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
 }
+
+.lineUp2{
+  position: static;
+ 
+}
+.makeBig{
+  min-height: 1400px;
+}
+
+.makeSmall{
+  -webkit-animation-name: makeSmall;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-iteration-count: 1;
+  max-height: 2%;
+}
+
+@-webkit-keyframes makeSmall {
+  0% {
+    min-height: 100%;
+  }
+  5% {
+    min-height: 95%;
+  }
+  10%{
+    min-height: 90%;
+  }
+  20%{
+    max-height: 8%;
+  }
+  40%{
+    max-height: 6%;
+  }
+  60%{
+    max-height: 5%
+  }
+  80%{
+    max-height: 4%;
+  }
+  100%{
+    max-height: 3%;
+  }
+
+}
+
+.makeSmall:hover{
+  min-height: 70%;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    border-color: red;
+    opacity: 1.0;
+    -webkit-transform: scale(1.0) rotate(0deg);
+  }
+  33% {
+    border-color: blue;
+    opacity: 0.75;
+    -webkit-transform: scale(1.1) rotate(-5deg);
+  }
+  67% {
+    border-color: green;
+    opacity: 0.5;
+    -webkit-transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    border-color: red;
+    opacity: 1.0;
+    -webkit-transform: scale(1.0) rotate(0deg);
+  }
+ }
+ 
+ .pulsedbox {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+ }
+/* @-webkit-keyframes bounce {
+
+
+} */

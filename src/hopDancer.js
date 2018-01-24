@@ -12,6 +12,6 @@ makeHopDancer.prototype.step = function() {
 
 makeDancer.prototype.step.call(this, this.timeBetweenSteps);
 
- this.$node.toggle();
+//  this.$node.toggle();
 
 };

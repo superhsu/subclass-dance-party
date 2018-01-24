@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+          <!DOCTYPE html>
 <html>
   <head>
     <title>Object Dance Party</title>
@@ -12,9 +12,58 @@
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
+      <div class = "lineUpHere">
+      <a href="#" class="lineUp"> Line Up</a>
+      <a href="#" class="makeBigger">Make Bigger </a>
+      <a href="#" class="makeSmall">Make Small</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makePopDancer">add a pop dancer</a>  
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeHopDancer">add a hop dancer</a>   </div>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeHopDancer">Add Disco Lights</a>   </div>
+    </div>
     <script src="src/init.js"></script>
+
+  <script>
+  window.onload = function(){
+    alert("test")
+    $(".makeBigger").click(function(){
+      $(".dancer").removeClass("makeSmall")
+      $(".dancer").addClass("makeBig");
+    });
+    
+    $(".makeSmall").click(function(){
+      $(".dancer").addClass("makeSmall");
+      setTimeout($(".dancer").removeClass("makeBig"), 500);
+    });
+
+    $(".lineUp").click(function(){
+      $(".dancer").addClass("lineUp2")
+    });
+  };
+
+/*
+var $img = $(‘#kitteh’),
+    scale = 1.1,
+    h = $img.height(),
+    sh = h*scale;
+
+function scaleUp($elt)
+{
+    $elt.animate({height: sh}, function ()
+    {
+        scaleDown($elt);
+    });
+}
+
+function scaleDown($elt)
+{
+    $elt.animate({height: h}, function ()
+    {
+        scaleUp($elt);
+    });
+}
+
+scaleUp($img);
+*/
+  </script>
   </body>
 </html>
